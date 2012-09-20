@@ -1,0 +1,1183 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78016EB2145D950F0053E21A /* ShaderPhong.vp in Resources */ = {isa = PBXBuildFile; fileRef = 78016EB1145D950F0053E21A /* ShaderPhong.vp */; };
+		78016EB4145D95260053E21A /* ShaderPhong.fp in Resources */ = {isa = PBXBuildFile; fileRef = 78016EB3145D95260053E21A /* ShaderPhong.fp */; };
+		78058B92146A6A8900A221F3 /* KSCBVHNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78058B91146A6A8900A221F3 /* KSCBVHNode.mm */; };
+		78058B96146A95A900A221F3 /* KSCBoundingVolume.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78058B95146A95A900A221F3 /* KSCBoundingVolume.mm */; };
+		78058B9B146C1E0100A221F3 /* KSCPotentialContact.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78058B9A146C1E0100A221F3 /* KSCPotentialContact.mm */; };
+		78193F2D14B87BEA00921542 /* KSMRandomNumberGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F2414B87BEA00921542 /* KSMRandomNumberGenerator.mm */; };
+		78193F2E14B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F2614B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.mm */; };
+		78193F2F14B87BEA00921542 /* KSMDistributionFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F2814B87BEA00921542 /* KSMDistributionFunction.mm */; };
+		78193F3114B87BEA00921542 /* KSMDistributionFunctionAbstractBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F2C14B87BEA00921542 /* KSMDistributionFunctionAbstractBase.mm */; };
+		78193F3514B8828D00921542 /* KSMEnhancedRandomNumberGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F3414B8828D00921542 /* KSMEnhancedRandomNumberGenerator.mm */; };
+		78193F3714B8830400921542 /* KSMNormalDistributionFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78193F3614B8830400921542 /* KSMNormalDistributionFunction.mm */; };
+		7819480115C28F960097A31B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7819480015C28F960097A31B /* .gitignore */; };
+		7821084F15A81F5C00B1A63E /* BagArmani.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821081715A81F5C00B1A63E /* BagArmani.3DS */; };
+		7821085015A81F5C00B1A63E /* Boots.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081815A81F5C00B1A63E /* Boots.3ds */; };
+		7821085115A81F5C00B1A63E /* BridgeFancy.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081915A81F5C00B1A63E /* BridgeFancy.3ds */; };
+		7821085215A81F5C00B1A63E /* Cone.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081A15A81F5C00B1A63E /* Cone.3ds */; };
+		7821085315A81F5C00B1A63E /* Cube.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081B15A81F5C00B1A63E /* Cube.3ds */; };
+		7821085415A81F5C00B1A63E /* CubeMarble.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081C15A81F5C00B1A63E /* CubeMarble.3ds */; };
+		7821085515A81F5C00B1A63E /* CubeMarbleTexture.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081D15A81F5C00B1A63E /* CubeMarbleTexture.3ds */; };
+		7821085615A81F5C00B1A63E /* Cylinder.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821081E15A81F5C00B1A63E /* Cylinder.3ds */; };
+		7821085715A81F5C00B1A63E /* FigurineAphrodite.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821081F15A81F5C00B1A63E /* FigurineAphrodite.3DS */; };
+		7821085815A81F5C00B1A63E /* FigurineAphroditeModern.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821082015A81F5C00B1A63E /* FigurineAphroditeModern.3ds */; };
+		7821085915A81F5C00B1A63E /* Globe.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082115A81F5C00B1A63E /* Globe.3DS */; };
+		7821085A15A81F5C00B1A63E /* HighlyDetailedIonicColumn.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821082215A81F5C00B1A63E /* HighlyDetailedIonicColumn.3ds */; };
+		7821085B15A81F5C00B1A63E /* HighyDetailedCorinthianColumn.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082315A81F5C00B1A63E /* HighyDetailedCorinthianColumn.3DS */; };
+		7821085C15A81F5C00B1A63E /* junglefootbridge.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082415A81F5C00B1A63E /* junglefootbridge.3DS */; };
+		7821085D15A81F5C00B1A63E /* Polyhedra.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821082515A81F5C00B1A63E /* Polyhedra.3ds */; };
+		7821085E15A81F5C00B1A63E /* SculptureBust.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082615A81F5C00B1A63E /* SculptureBust.3DS */; };
+		7821085F15A81F5C00B1A63E /* SculptureShiva.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821082715A81F5C00B1A63E /* SculptureShiva.3ds */; };
+		7821086015A81F5C00B1A63E /* ShipAndHelicopter.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082815A81F5C00B1A63E /* ShipAndHelicopter.3DS */; };
+		7821086115A81F5C00B1A63E /* Skeleton.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082915A81F5C00B1A63E /* Skeleton.3DS */; };
+		7821086215A81F5C00B1A63E /* Skull.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821082A15A81F5C00B1A63E /* Skull.3DS */; };
+		7821086315A81F5C00B1A63E /* Earth.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821082D15A81F5C00B1A63E /* Earth.bmp */; };
+		7821086415A81F5C00B1A63E /* PlanetEarth.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821082E15A81F5C00B1A63E /* PlanetEarth.3ds */; };
+		7821086515A81F5C00B1A63E /* Jupiter.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821083015A81F5C00B1A63E /* Jupiter.bmp */; };
+		7821086615A81F5C00B1A63E /* PlanetJupiter.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083115A81F5C00B1A63E /* PlanetJupiter.3ds */; };
+		7821086715A81F5C00B1A63E /* Mars.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821083315A81F5C00B1A63E /* Mars.bmp */; };
+		7821086815A81F5C00B1A63E /* PlanetMars.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083415A81F5C00B1A63E /* PlanetMars.3ds */; };
+		7821086915A81F5C00B1A63E /* Mercury.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821083615A81F5C00B1A63E /* Mercury.bmp */; };
+		7821086A15A81F5C00B1A63E /* PlanetMercury.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083715A81F5C00B1A63E /* PlanetMercury.3ds */; };
+		7821086B15A81F5C00B1A63E /* Neptune.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821083915A81F5C00B1A63E /* Neptune.bmp */; };
+		7821086C15A81F5C00B1A63E /* PlanetNeptune.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083A15A81F5C00B1A63E /* PlanetNeptune.3ds */; };
+		7821086D15A81F5C00B1A63E /* PlanetSaturn.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083C15A81F5C00B1A63E /* PlanetSaturn.3ds */; };
+		7821086E15A81F5C00B1A63E /* Saturn.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821083D15A81F5C00B1A63E /* Saturn.bmp */; };
+		7821086F15A81F5C00B1A63E /* PlanetUranus.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821083F15A81F5C00B1A63E /* PlanetUranus.3ds */; };
+		7821087015A81F5C00B1A63E /* Uranus.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821084015A81F5C00B1A63E /* Uranus.bmp */; };
+		7821087115A81F5C00B1A63E /* PlanetVenus.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084215A81F5C00B1A63E /* PlanetVenus.3ds */; };
+		7821087215A81F5C00B1A63E /* Venus.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821084315A81F5C00B1A63E /* Venus.bmp */; };
+		7821087315A81F5C00B1A63E /* PlanetSun.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084515A81F5C00B1A63E /* PlanetSun.3ds */; };
+		7821087415A81F5C00B1A63E /* Sun.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821084615A81F5C00B1A63E /* Sun.bmp */; };
+		7821087515A81F5C00B1A63E /* Sphere.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084715A81F5C00B1A63E /* Sphere.3ds */; };
+		7821087615A81F5C00B1A63E /* Stair.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084815A81F5C00B1A63E /* Stair.3ds */; };
+		7821087715A81F5C00B1A63E /* TelescopeCelestronOmni.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 7821084915A81F5C00B1A63E /* TelescopeCelestronOmni.3DS */; };
+		7821087815A81F5C00B1A63E /* Terrain.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084A15A81F5C00B1A63E /* Terrain.3ds */; };
+		7821087915A81F5C00B1A63E /* Torus.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084B15A81F5C00B1A63E /* Torus.3ds */; };
+		7821087A15A81F5C00B1A63E /* Tube.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084C15A81F5C00B1A63E /* Tube.3ds */; };
+		7821087B15A81F5C00B1A63E /* TwoHerosSupportingBeam.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084D15A81F5C00B1A63E /* TwoHerosSupportingBeam.3ds */; };
+		7821087C15A81F5C00B1A63E /* Woman.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 7821084E15A81F5C00B1A63E /* Woman.3ds */; };
+		7821089615A81F8000B1A63E /* Charon.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821087E15A81F8000B1A63E /* Charon.bmp */; };
+		7821089715A81F8000B1A63E /* Cliff.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821087F15A81F8000B1A63E /* Cliff.psd */; };
+		7821089815A81F8000B1A63E /* Concrete.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821088015A81F8000B1A63E /* Concrete.psd */; };
+		7821089915A81F8000B1A63E /* Globe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088115A81F8000B1A63E /* Globe.jpg */; };
+		7821089A15A81F8000B1A63E /* Granite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088215A81F8000B1A63E /* Granite.jpg */; };
+		7821089B15A81F8000B1A63E /* Grass.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821088315A81F8000B1A63E /* Grass.psd */; };
+		7821089C15A81F8000B1A63E /* GrassRock.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821088415A81F8000B1A63E /* GrassRock.psd */; };
+		7821089D15A81F8000B1A63E /* Green_Spottet.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821088515A81F8000B1A63E /* Green_Spottet.psd */; };
+		7821089E15A81F8000B1A63E /* IronRusty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088615A81F8000B1A63E /* IronRusty.jpg */; };
+		7821089F15A81F8000B1A63E /* Leather1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088715A81F8000B1A63E /* Leather1.jpg */; };
+		782108A015A81F8000B1A63E /* LeathTan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088815A81F8000B1A63E /* LeathTan.jpg */; };
+		782108A115A81F8000B1A63E /* marbel4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 7821088915A81F8000B1A63E /* marbel4.JPG */; };
+		782108A215A81F8000B1A63E /* Marble.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088A15A81F8000B1A63E /* Marble.jpg */; };
+		782108A315A81F8000B1A63E /* Marble2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088B15A81F8000B1A63E /* Marble2.jpg */; };
+		782108A415A81F8000B1A63E /* Marble3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088C15A81F8000B1A63E /* Marble3.jpg */; };
+		782108A515A81F8000B1A63E /* PlanksNew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821088D15A81F8000B1A63E /* PlanksNew.jpg */; };
+		782108A615A81F8000B1A63E /* Pluto.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7821088E15A81F8000B1A63E /* Pluto.bmp */; };
+		782108A715A81F8000B1A63E /* SandRipp.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821088F15A81F8000B1A63E /* SandRipp.psd */; };
+		782108A815A81F8000B1A63E /* SandSmoo.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7821089015A81F8000B1A63E /* SandSmoo.psd */; };
+		782108A915A81F8000B1A63E /* Shiva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821089115A81F8000B1A63E /* Shiva.jpg */; };
+		782108AA15A81F8000B1A63E /* StoneGreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821089215A81F8000B1A63E /* StoneGreen.jpg */; };
+		782108AB15A81F8000B1A63E /* WoodRough.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821089315A81F8000B1A63E /* WoodRough.jpg */; };
+		782108AC15A81F8000B1A63E /* WoodShiny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821089415A81F8000B1A63E /* WoodShiny.jpg */; };
+		782108AD15A81F8000B1A63E /* WoodShiny2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7821089515A81F8000B1A63E /* WoodShiny2.jpg */; };
+		782A43B1145028B700CFAE47 /* KSGLight.mm in Sources */ = {isa = PBXBuildFile; fileRef = 782A43B0145028B700CFAE47 /* KSGLight.mm */; };
+		782A43B4145029D000CFAE47 /* KSGMaterial.mm in Sources */ = {isa = PBXBuildFile; fileRef = 782A43B3145029D000CFAE47 /* KSGMaterial.mm */; };
+		783C0C66142726B60058F4E0 /* KSGCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 783C0C65142726B60058F4E0 /* KSGCamera.mm */; };
+		783C0C691428EA870058F4E0 /* KSGMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 783C0C681428EA860058F4E0 /* KSGMesh.mm */; };
+		78414FC8141CC6FF00B74348 /* KSGGameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78414FC7141CC6FF00B74348 /* KSGGameObject.mm */; };
+		78414FCC1420C90200B74348 /* KSGWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78414FCB1420C90100B74348 /* KSGWorld.mm */; };
+		784F75181495FC1900E4B999 /* KSPForceGeneratorBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 784F75171495FC1900E4B999 /* KSPForceGeneratorBase.mm */; };
+		784F751B1496075E00E4B999 /* KSPFGUniversalBodyForce.mm in Sources */ = {isa = PBXBuildFile; fileRef = 784F751A1496075E00E4B999 /* KSPFGUniversalBodyForce.mm */; };
+		7867DE06148A74EF0070E569 /* KSCContact.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE05148A74EF0070E569 /* KSCContact.mm */; };
+		7867DE0A148A7BD10070E569 /* KSCPrimitive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE09148A7BD10070E569 /* KSCPrimitive.mm */; };
+		7867DE10148A7EC20070E569 /* KSCPrimitivePlane.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE0F148A7EC20070E569 /* KSCPrimitivePlane.mm */; };
+		7867DE12148A80310070E569 /* KSCPrimitiveSphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE11148A80310070E569 /* KSCPrimitiveSphere.mm */; };
+		7867DE15148A81210070E569 /* KSCPrimitiveBox.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE14148A81210070E569 /* KSCPrimitiveBox.mm */; };
+		7867DE18148A81C20070E569 /* KSCCollisionDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE17148A81C20070E569 /* KSCCollisionDetector.mm */; };
+		7867DE1B148CF3BD0070E569 /* KSPPhysicsBody.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7867DE1A148CF3BD0070E569 /* KSPPhysicsBody.mm */; };
+		787A160E148E552600857B38 /* KSPForceGeneratorRegistry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A160D148E552600857B38 /* KSPForceGeneratorRegistry.mm */; };
+		787A1616148E621500857B38 /* KSPFGUniformGravity.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A1615148E621500857B38 /* KSPFGUniformGravity.mm */; };
+		787A1619148E65A000857B38 /* KSPFGAnchoredSpring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A1618148E65A000857B38 /* KSPFGAnchoredSpring.mm */; };
+		787A161C148F9D1A00857B38 /* KSPFGConnectingSpring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A161B148F9D1A00857B38 /* KSPFGConnectingSpring.mm */; };
+		787A161F148FCA6600857B38 /* KSPFGSpring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A161E148FCA6600857B38 /* KSPFGSpring.mm */; };
+		787A1622148FE0E600857B38 /* KSPFGFloat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A1621148FE0E600857B38 /* KSPFGFloat.mm */; };
+		787A16251490B85E00857B38 /* KSPWater.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A16241490B85E00857B38 /* KSPWater.mm */; };
+		787A1629149225A800857B38 /* KSPSolarSystemObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A1628149225A800857B38 /* KSPSolarSystemObject.mm */; };
+		787A162C1492450E00857B38 /* KSGColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787A162B1492450E00857B38 /* KSGColor.mm */; };
+		787DD951149782C300020AB2 /* KSVVehicle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787DD950149782C300020AB2 /* KSVVehicle.mm */; };
+		788185D2145173330064736A /* ShaderGouraud.vp in Resources */ = {isa = PBXBuildFile; fileRef = 788185D1145173330064736A /* ShaderGouraud.vp */; };
+		788185D51451D10E0064736A /* ShaderGouraud.fp in Resources */ = {isa = PBXBuildFile; fileRef = 788185D41451D10E0064736A /* ShaderGouraud.fp */; };
+		788185D81452AA580064736A /* KSGTransformPack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 788185D71452AA580064736A /* KSGTransformPack.mm */; };
+		788243D2145D987500D1828A /* ShaderFlat.fp in Resources */ = {isa = PBXBuildFile; fileRef = 788243D0145D987500D1828A /* ShaderFlat.fp */; };
+		788243D3145D987500D1828A /* ShaderFlat.vp in Resources */ = {isa = PBXBuildFile; fileRef = 788243D1145D987500D1828A /* ShaderFlat.vp */; };
+		788243F91461924A00D1828A /* KSGMaterialManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 788243F81461924A00D1828A /* KSGMaterialManager.mm */; };
+		7886A0EB1462F85200AAD5C5 /* KSGTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7886A0EA1462F85200AAD5C5 /* KSGTexture.mm */; };
+		7886A0EF1462F88000AAD5C5 /* KSGTextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7886A0EE1462F88000AAD5C5 /* KSGTextureManager.mm */; };
+		7886A0F41463EAF800AAD5C5 /* KSGResourceManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7886A0F31463EAF800AAD5C5 /* KSGResourceManager.mm */; };
+		7886A0F814641FE200AAD5C5 /* KSGManagedResourceBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7886A0F714641FE100AAD5C5 /* KSGManagedResourceBase.mm */; };
+		7894C6CD14430468002DBDF0 /* KSGTriangle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7894C6CC14430468002DBDF0 /* KSGTriangle.mm */; };
+		7894C6D3144471B9002DBDF0 /* KSGIndexedTriangleBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7894C6D2144471B8002DBDF0 /* KSGIndexedTriangleBatch.mm */; };
+		78BF11AD1476D7C2002FC456 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 78BF11AC1476D7C2002FC456 /* README */; };
+		78BF1D9B1416429300AD71B2 /* KSGVertex.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78BF1D9A1416429300AD71B2 /* KSGVertex.mm */; };
+		78BF1DC01417ABB600AD71B2 /* ShaderXY.vp in Resources */ = {isa = PBXBuildFile; fileRef = 78BF1DBF1417ABB600AD71B2 /* ShaderXY.vp */; };
+		78BF1DC21417ABD300AD71B2 /* ShaderXY.fp in Resources */ = {isa = PBXBuildFile; fileRef = 78BF1DC11417ABD300AD71B2 /* ShaderXY.fp */; };
+		78BF1DC51417B8E300AD71B2 /* KSGShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78BF1DC41417B8E300AD71B2 /* KSGShaderManager.mm */; };
+		78BF1DCD1417D29400AD71B2 /* KSGIndexedAttributes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78BF1DCC1417D29400AD71B2 /* KSGIndexedAttributes.mm */; };
+		78C31B1E14AD360400E017F7 /* KSPFGUniformDrag.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78C31B1D14AD360400E017F7 /* KSPFGUniformDrag.mm */; };
+		78CB133B146523B100E30ACC /* KSGImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78CB133A146523B100E30ACC /* KSGImage.mm */; };
+		78CB133F1465259C00E30ACC /* KSGImageManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78CB133E1465259C00E30ACC /* KSGImageManager.mm */; };
+		78CE2F0714AB46DB00409FED /* KSPMomentsOfInertia.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78CE2F0614AB46DB00409FED /* KSPMomentsOfInertia.mm */; };
+		78DDEA7214A09BFD00EB284C /* KSCOrientablePrimitive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78DDEA7114A09BFD00EB284C /* KSCOrientablePrimitive.mm */; };
+		78E221A3143F1BDF00AA0B14 /* KSGModelLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78E221A2143F1BDF00AA0B14 /* KSGModelLoader.mm */; };
+		78E221A91440BE1700AA0B14 /* KSGBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78E221A81440BE1700AA0B14 /* KSGBatch.mm */; };
+		78F2D1CD147682E7004033ED /* KSGUID.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F2D1CC147682E7004033ED /* KSGUID.mm */; };
+		78F4BC4314B33AA40062D06A /* KSEEnvironments.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F4BC4214B33AA40062D06A /* KSEEnvironments.mm */; };
+		78F4BC4914B35D0E0062D06A /* KSPFGSphericalGravitySource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F4BC4814B35D0E0062D06A /* KSPFGSphericalGravitySource.mm */; };
+		78F4BC4C14B44F2D0062D06A /* KSESolarSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F4BC4B14B44F2D0062D06A /* KSESolarSystem.mm */; };
+		78F4BC4F14B44FEC0062D06A /* KSESolarSystemBody.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F4BC4E14B44FEC0062D06A /* KSESolarSystemBody.mm */; };
+		78FFCB751413950200975E73 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFCB741413950200975E73 /* Cocoa.framework */; };
+		78FFCB7F1413950200975E73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78FFCB7D1413950200975E73 /* InfoPlist.strings */; };
+		78FFCB811413950200975E73 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78FFCB801413950200975E73 /* main.mm */; };
+		78FFCB851413950200975E73 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 78FFCB831413950200975E73 /* Credits.rtf */; };
+		78FFCB881413950200975E73 /* WorldAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78FFCB871413950200975E73 /* WorldAppDelegate.mm */; };
+		78FFCB8B1413950200975E73 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FFCB891413950200975E73 /* MainMenu.xib */; };
+		78FFCB921413951000975E73 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFCB911413951000975E73 /* OpenGL.framework */; };
+		78FFCB961413975100975E73 /* OpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78FFCB951413975100975E73 /* OpenGLView.mm */; };
+		78FFCBC51413D82B00975E73 /* KSGVertexBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78FFCBC41413D82B00975E73 /* KSGVertexBatch.mm */; };
+		78FFCBCB1414B52000975E73 /* KSMMaths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78FFCBCA1414B52000975E73 /* KSMMaths.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		78016EB1145D950F0053E21A /* ShaderPhong.vp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = ShaderPhong.vp; sourceTree = "<group>"; };
+		78016EB3145D95260053E21A /* ShaderPhong.fp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = ShaderPhong.fp; sourceTree = "<group>"; };
+		78058B90146A6A8900A221F3 /* KSCBVHNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCBVHNode.h; sourceTree = "<group>"; };
+		78058B91146A6A8900A221F3 /* KSCBVHNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCBVHNode.mm; sourceTree = "<group>"; };
+		78058B94146A95A900A221F3 /* KSCBoundingVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCBoundingVolume.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78058B95146A95A900A221F3 /* KSCBoundingVolume.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSCBoundingVolume.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78058B99146C1E0100A221F3 /* KSCPotentialContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCPotentialContact.h; sourceTree = "<group>"; };
+		78058B9A146C1E0100A221F3 /* KSCPotentialContact.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCPotentialContact.mm; sourceTree = "<group>"; };
+		78193F2314B87BEA00921542 /* KSMRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMRandomNumberGenerator.h; sourceTree = "<group>"; };
+		78193F2414B87BEA00921542 /* KSMRandomNumberGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMRandomNumberGenerator.mm; sourceTree = "<group>"; };
+		78193F2514B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMRandomNumberGeneratorCMWC.h; sourceTree = "<group>"; };
+		78193F2614B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMRandomNumberGeneratorCMWC.mm; sourceTree = "<group>"; };
+		78193F2714B87BEA00921542 /* KSMDistributionFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMDistributionFunction.h; sourceTree = "<group>"; };
+		78193F2814B87BEA00921542 /* KSMDistributionFunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMDistributionFunction.mm; sourceTree = "<group>"; };
+		78193F2914B87BEA00921542 /* KSMNormalDistributionFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMNormalDistributionFunction.h; sourceTree = "<group>"; };
+		78193F2B14B87BEA00921542 /* KSMDistributionFunctionAbstractBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMDistributionFunctionAbstractBase.h; sourceTree = "<group>"; };
+		78193F2C14B87BEA00921542 /* KSMDistributionFunctionAbstractBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMDistributionFunctionAbstractBase.mm; sourceTree = "<group>"; };
+		78193F3314B8828D00921542 /* KSMEnhancedRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMEnhancedRandomNumberGenerator.h; sourceTree = "<group>"; };
+		78193F3414B8828D00921542 /* KSMEnhancedRandomNumberGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMEnhancedRandomNumberGenerator.mm; sourceTree = "<group>"; };
+		78193F3614B8830400921542 /* KSMNormalDistributionFunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSMNormalDistributionFunction.mm; sourceTree = "<group>"; };
+		7819480015C28F960097A31B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7821081715A81F5C00B1A63E /* BagArmani.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = BagArmani.3DS; sourceTree = "<group>"; };
+		7821081815A81F5C00B1A63E /* Boots.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots.3ds; sourceTree = "<group>"; };
+		7821081915A81F5C00B1A63E /* BridgeFancy.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = BridgeFancy.3ds; sourceTree = "<group>"; };
+		7821081A15A81F5C00B1A63E /* Cone.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cone.3ds; sourceTree = "<group>"; };
+		7821081B15A81F5C00B1A63E /* Cube.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cube.3ds; sourceTree = "<group>"; };
+		7821081C15A81F5C00B1A63E /* CubeMarble.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = CubeMarble.3ds; sourceTree = "<group>"; };
+		7821081D15A81F5C00B1A63E /* CubeMarbleTexture.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = CubeMarbleTexture.3ds; sourceTree = "<group>"; };
+		7821081E15A81F5C00B1A63E /* Cylinder.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cylinder.3ds; sourceTree = "<group>"; };
+		7821081F15A81F5C00B1A63E /* FigurineAphrodite.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = FigurineAphrodite.3DS; sourceTree = "<group>"; };
+		7821082015A81F5C00B1A63E /* FigurineAphroditeModern.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = FigurineAphroditeModern.3ds; sourceTree = "<group>"; };
+		7821082115A81F5C00B1A63E /* Globe.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = Globe.3DS; sourceTree = "<group>"; };
+		7821082215A81F5C00B1A63E /* HighlyDetailedIonicColumn.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighlyDetailedIonicColumn.3ds; sourceTree = "<group>"; };
+		7821082315A81F5C00B1A63E /* HighyDetailedCorinthianColumn.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighyDetailedCorinthianColumn.3DS; sourceTree = "<group>"; };
+		7821082415A81F5C00B1A63E /* junglefootbridge.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = junglefootbridge.3DS; sourceTree = "<group>"; };
+		7821082515A81F5C00B1A63E /* Polyhedra.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Polyhedra.3ds; sourceTree = "<group>"; };
+		7821082615A81F5C00B1A63E /* SculptureBust.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = SculptureBust.3DS; sourceTree = "<group>"; };
+		7821082715A81F5C00B1A63E /* SculptureShiva.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = SculptureShiva.3ds; sourceTree = "<group>"; };
+		7821082815A81F5C00B1A63E /* ShipAndHelicopter.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShipAndHelicopter.3DS; sourceTree = "<group>"; };
+		7821082915A81F5C00B1A63E /* Skeleton.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skeleton.3DS; sourceTree = "<group>"; };
+		7821082A15A81F5C00B1A63E /* Skull.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skull.3DS; sourceTree = "<group>"; };
+		7821082D15A81F5C00B1A63E /* Earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Earth.bmp; sourceTree = "<group>"; };
+		7821082E15A81F5C00B1A63E /* PlanetEarth.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetEarth.3ds; sourceTree = "<group>"; };
+		7821083015A81F5C00B1A63E /* Jupiter.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Jupiter.bmp; sourceTree = "<group>"; };
+		7821083115A81F5C00B1A63E /* PlanetJupiter.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetJupiter.3ds; sourceTree = "<group>"; };
+		7821083315A81F5C00B1A63E /* Mars.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Mars.bmp; sourceTree = "<group>"; };
+		7821083415A81F5C00B1A63E /* PlanetMars.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetMars.3ds; sourceTree = "<group>"; };
+		7821083615A81F5C00B1A63E /* Mercury.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Mercury.bmp; sourceTree = "<group>"; };
+		7821083715A81F5C00B1A63E /* PlanetMercury.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetMercury.3ds; sourceTree = "<group>"; };
+		7821083915A81F5C00B1A63E /* Neptune.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Neptune.bmp; sourceTree = "<group>"; };
+		7821083A15A81F5C00B1A63E /* PlanetNeptune.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetNeptune.3ds; sourceTree = "<group>"; };
+		7821083C15A81F5C00B1A63E /* PlanetSaturn.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetSaturn.3ds; sourceTree = "<group>"; };
+		7821083D15A81F5C00B1A63E /* Saturn.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Saturn.bmp; sourceTree = "<group>"; };
+		7821083F15A81F5C00B1A63E /* PlanetUranus.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetUranus.3ds; sourceTree = "<group>"; };
+		7821084015A81F5C00B1A63E /* Uranus.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Uranus.bmp; sourceTree = "<group>"; };
+		7821084215A81F5C00B1A63E /* PlanetVenus.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetVenus.3ds; sourceTree = "<group>"; };
+		7821084315A81F5C00B1A63E /* Venus.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Venus.bmp; sourceTree = "<group>"; };
+		7821084515A81F5C00B1A63E /* PlanetSun.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetSun.3ds; sourceTree = "<group>"; };
+		7821084615A81F5C00B1A63E /* Sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Sun.bmp; sourceTree = "<group>"; };
+		7821084715A81F5C00B1A63E /* Sphere.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sphere.3ds; sourceTree = "<group>"; };
+		7821084815A81F5C00B1A63E /* Stair.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stair.3ds; sourceTree = "<group>"; };
+		7821084915A81F5C00B1A63E /* TelescopeCelestronOmni.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = TelescopeCelestronOmni.3DS; sourceTree = "<group>"; };
+		7821084A15A81F5C00B1A63E /* Terrain.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Terrain.3ds; sourceTree = "<group>"; };
+		7821084B15A81F5C00B1A63E /* Torus.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Torus.3ds; sourceTree = "<group>"; };
+		7821084C15A81F5C00B1A63E /* Tube.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tube.3ds; sourceTree = "<group>"; };
+		7821084D15A81F5C00B1A63E /* TwoHerosSupportingBeam.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwoHerosSupportingBeam.3ds; sourceTree = "<group>"; };
+		7821084E15A81F5C00B1A63E /* Woman.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Woman.3ds; sourceTree = "<group>"; };
+		7821087E15A81F8000B1A63E /* Charon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Charon.bmp; sourceTree = "<group>"; };
+		7821087F15A81F8000B1A63E /* Cliff.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cliff.psd; sourceTree = "<group>"; };
+		7821088015A81F8000B1A63E /* Concrete.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Concrete.psd; sourceTree = "<group>"; };
+		7821088115A81F8000B1A63E /* Globe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Globe.jpg; sourceTree = "<group>"; };
+		7821088215A81F8000B1A63E /* Granite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Granite.jpg; sourceTree = "<group>"; };
+		7821088315A81F8000B1A63E /* Grass.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grass.psd; sourceTree = "<group>"; };
+		7821088415A81F8000B1A63E /* GrassRock.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = GrassRock.psd; sourceTree = "<group>"; };
+		7821088515A81F8000B1A63E /* Green_Spottet.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Green_Spottet.psd; sourceTree = "<group>"; };
+		7821088615A81F8000B1A63E /* IronRusty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IronRusty.jpg; sourceTree = "<group>"; };
+		7821088715A81F8000B1A63E /* Leather1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Leather1.jpg; sourceTree = "<group>"; };
+		7821088815A81F8000B1A63E /* LeathTan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LeathTan.jpg; sourceTree = "<group>"; };
+		7821088915A81F8000B1A63E /* marbel4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marbel4.JPG; sourceTree = "<group>"; };
+		7821088A15A81F8000B1A63E /* Marble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marble.jpg; sourceTree = "<group>"; };
+		7821088B15A81F8000B1A63E /* Marble2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marble2.jpg; sourceTree = "<group>"; };
+		7821088C15A81F8000B1A63E /* Marble3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marble3.jpg; sourceTree = "<group>"; };
+		7821088D15A81F8000B1A63E /* PlanksNew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PlanksNew.jpg; sourceTree = "<group>"; };
+		7821088E15A81F8000B1A63E /* Pluto.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Pluto.bmp; sourceTree = "<group>"; };
+		7821088F15A81F8000B1A63E /* SandRipp.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = SandRipp.psd; sourceTree = "<group>"; };
+		7821089015A81F8000B1A63E /* SandSmoo.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = SandSmoo.psd; sourceTree = "<group>"; };
+		7821089115A81F8000B1A63E /* Shiva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shiva.jpg; sourceTree = "<group>"; };
+		7821089215A81F8000B1A63E /* StoneGreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StoneGreen.jpg; sourceTree = "<group>"; };
+		7821089315A81F8000B1A63E /* WoodRough.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodRough.jpg; sourceTree = "<group>"; };
+		7821089415A81F8000B1A63E /* WoodShiny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodShiny.jpg; sourceTree = "<group>"; };
+		7821089515A81F8000B1A63E /* WoodShiny2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodShiny2.jpg; sourceTree = "<group>"; };
+		782A43AF145028B700CFAE47 /* KSGLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGLight.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		782A43B0145028B700CFAE47 /* KSGLight.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGLight.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		782A43B2145029D000CFAE47 /* KSGMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGMaterial.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		782A43B3145029D000CFAE47 /* KSGMaterial.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGMaterial.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		783C0C64142726B60058F4E0 /* KSGCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGCamera.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		783C0C65142726B60058F4E0 /* KSGCamera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGCamera.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		783C0C671428EA860058F4E0 /* KSGMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGMesh.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		783C0C681428EA860058F4E0 /* KSGMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGMesh.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78414FC6141CC6FF00B74348 /* KSGGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGGameObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78414FC7141CC6FF00B74348 /* KSGGameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGGameObject.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78414FCA1420C90100B74348 /* KSGWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGWorld.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78414FCB1420C90100B74348 /* KSGWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGWorld.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		784F75161495FC1900E4B999 /* KSPForceGeneratorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPForceGeneratorBase.h; sourceTree = "<group>"; };
+		784F75171495FC1900E4B999 /* KSPForceGeneratorBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPForceGeneratorBase.mm; sourceTree = "<group>"; };
+		784F75191496075E00E4B999 /* KSPFGUniversalBodyForce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPFGUniversalBodyForce.h; sourceTree = "<group>"; };
+		784F751A1496075E00E4B999 /* KSPFGUniversalBodyForce.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPFGUniversalBodyForce.mm; sourceTree = "<group>"; };
+		784F751C14962A0F00E4B999 /* KSPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPConstants.h; sourceTree = "<group>"; };
+		784F751D1496307A00E4B999 /* KSGGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGGraphics.h; sourceTree = "<group>"; };
+		7867DE04148A74EF0070E569 /* KSCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCContact.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE05148A74EF0070E569 /* KSCContact.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCContact.mm; sourceTree = "<group>"; };
+		7867DE08148A7BD10070E569 /* KSCPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCPrimitive.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE09148A7BD10070E569 /* KSCPrimitive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSCPrimitive.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE0B148A7E310070E569 /* KSCPrimitiveSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCPrimitiveSphere.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE0E148A7EC20070E569 /* KSCPrimitivePlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSCPrimitivePlane.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE0F148A7EC20070E569 /* KSCPrimitivePlane.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSCPrimitivePlane.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE11148A80310070E569 /* KSCPrimitiveSphere.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCPrimitiveSphere.mm; sourceTree = "<group>"; };
+		7867DE13148A81210070E569 /* KSCPrimitiveBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCPrimitiveBox.h; sourceTree = "<group>"; };
+		7867DE14148A81210070E569 /* KSCPrimitiveBox.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCPrimitiveBox.mm; sourceTree = "<group>"; };
+		7867DE16148A81C20070E569 /* KSCCollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCCollisionDetector.h; sourceTree = "<group>"; };
+		7867DE17148A81C20070E569 /* KSCCollisionDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSCCollisionDetector.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE19148CF3BD0070E569 /* KSPPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPPhysicsBody.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7867DE1A148CF3BD0070E569 /* KSPPhysicsBody.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPPhysicsBody.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A160C148E552600857B38 /* KSPForceGeneratorRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPForceGeneratorRegistry.h; sourceTree = "<group>"; };
+		787A160D148E552600857B38 /* KSPForceGeneratorRegistry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPForceGeneratorRegistry.mm; sourceTree = "<group>"; };
+		787A1614148E621500857B38 /* KSPFGUniformGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPFGUniformGravity.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A1615148E621500857B38 /* KSPFGUniformGravity.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPFGUniformGravity.mm; sourceTree = "<group>"; };
+		787A1617148E65A000857B38 /* KSPFGAnchoredSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPFGAnchoredSpring.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A1618148E65A000857B38 /* KSPFGAnchoredSpring.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPFGAnchoredSpring.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		787A161A148F9D1A00857B38 /* KSPFGConnectingSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPFGConnectingSpring.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A161B148F9D1A00857B38 /* KSPFGConnectingSpring.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPFGConnectingSpring.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		787A161D148FCA6600857B38 /* KSPFGSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPFGSpring.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A161E148FCA6600857B38 /* KSPFGSpring.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPFGSpring.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		787A1620148FE0E600857B38 /* KSPFGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPFGFloat.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A1621148FE0E600857B38 /* KSPFGFloat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPFGFloat.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		787A16231490B85E00857B38 /* KSPWater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPWater.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A16241490B85E00857B38 /* KSPWater.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPWater.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		787A1626149183D500857B38 /* KSPPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPPhysics.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A1627149225A800857B38 /* KSPSolarSystemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSPSolarSystemObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A1628149225A800857B38 /* KSPSolarSystemObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSPSolarSystemObject.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		787A162A1492450E00857B38 /* KSGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGColor.h; sourceTree = "<group>"; };
+		787A162B1492450E00857B38 /* KSGColor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGColor.mm; sourceTree = "<group>"; };
+		787DD94F149782C300020AB2 /* KSVVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSVVehicle.h; sourceTree = "<group>"; };
+		787DD950149782C300020AB2 /* KSVVehicle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSVVehicle.mm; sourceTree = "<group>"; };
+		788185D1145173330064736A /* ShaderGouraud.vp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = ShaderGouraud.vp; sourceTree = "<group>"; };
+		788185D41451D10E0064736A /* ShaderGouraud.fp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShaderGouraud.fp; sourceTree = "<group>"; };
+		788185D61452AA570064736A /* KSGTransformPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGTransformPack.h; sourceTree = "<group>"; };
+		788185D71452AA580064736A /* KSGTransformPack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGTransformPack.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		788243D0145D987500D1828A /* ShaderFlat.fp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShaderFlat.fp; sourceTree = "<group>"; };
+		788243D1145D987500D1828A /* ShaderFlat.vp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShaderFlat.vp; sourceTree = "<group>"; };
+		788243F71461924A00D1828A /* KSGMaterialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGMaterialManager.h; sourceTree = "<group>"; };
+		788243F81461924A00D1828A /* KSGMaterialManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGMaterialManager.mm; sourceTree = "<group>"; };
+		7886A0E91462F85200AAD5C5 /* KSGTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGTexture.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7886A0EA1462F85200AAD5C5 /* KSGTexture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGTexture.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7886A0ED1462F88000AAD5C5 /* KSGTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGTextureManager.h; sourceTree = "<group>"; };
+		7886A0EE1462F88000AAD5C5 /* KSGTextureManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGTextureManager.mm; sourceTree = "<group>"; };
+		7886A0F01463E10900AAD5C5 /* KSGResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGResourceManager.h; sourceTree = "<group>"; };
+		7886A0F31463EAF800AAD5C5 /* KSGResourceManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGResourceManager.mm; sourceTree = "<group>"; };
+		7886A0F614641FE100AAD5C5 /* KSGManagedResourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGManagedResourceBase.h; sourceTree = "<group>"; };
+		7886A0F714641FE100AAD5C5 /* KSGManagedResourceBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGManagedResourceBase.mm; sourceTree = "<group>"; };
+		7894C6CB14430468002DBDF0 /* KSGTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGTriangle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7894C6CC14430468002DBDF0 /* KSGTriangle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGTriangle.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7894C6D2144471B8002DBDF0 /* KSGIndexedTriangleBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGIndexedTriangleBatch.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7894C6D4144471DE002DBDF0 /* KSGIndexedTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGIndexedTriangleBatch.h; sourceTree = "<group>"; };
+		78BF11AC1476D7C2002FC456 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		78BF1D991416429300AD71B2 /* KSGVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGVertex.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78BF1D9A1416429300AD71B2 /* KSGVertex.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGVertex.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78BF1DBF1417ABB600AD71B2 /* ShaderXY.vp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShaderXY.vp; sourceTree = "<group>"; };
+		78BF1DC11417ABD300AD71B2 /* ShaderXY.fp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShaderXY.fp; sourceTree = "<group>"; };
+		78BF1DC31417B8E300AD71B2 /* KSGShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGShaderManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78BF1DC41417B8E300AD71B2 /* KSGShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGShaderManager.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78BF1DCB1417D29400AD71B2 /* KSGIndexedAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGIndexedAttributes.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78BF1DCC1417D29400AD71B2 /* KSGIndexedAttributes.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGIndexedAttributes.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78C31B1C14AD360400E017F7 /* KSPFGUniformDrag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPFGUniformDrag.h; sourceTree = "<group>"; };
+		78C31B1D14AD360400E017F7 /* KSPFGUniformDrag.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPFGUniformDrag.mm; sourceTree = "<group>"; };
+		78CB1339146523B100E30ACC /* KSGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGImage.h; sourceTree = "<group>"; };
+		78CB133A146523B100E30ACC /* KSGImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGImage.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78CB133D1465259B00E30ACC /* KSGImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGImageManager.h; sourceTree = "<group>"; };
+		78CB133E1465259C00E30ACC /* KSGImageManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGImageManager.mm; sourceTree = "<group>"; };
+		78CE2F0514AB46DB00409FED /* KSPMomentsOfInertia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPMomentsOfInertia.h; sourceTree = "<group>"; };
+		78CE2F0614AB46DB00409FED /* KSPMomentsOfInertia.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPMomentsOfInertia.mm; sourceTree = "<group>"; };
+		78DDEA7014A09BFD00EB284C /* KSCOrientablePrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCOrientablePrimitive.h; sourceTree = "<group>"; };
+		78DDEA7114A09BFD00EB284C /* KSCOrientablePrimitive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSCOrientablePrimitive.mm; sourceTree = "<group>"; };
+		78E221A1143F1BDF00AA0B14 /* KSGModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGModelLoader.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78E221A2143F1BDF00AA0B14 /* KSGModelLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGModelLoader.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78E221A71440BE1700AA0B14 /* KSGBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGBatch.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78E221A81440BE1700AA0B14 /* KSGBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGBatch.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78F2D1C9147659E5004033ED /* KSCBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCBody.h; sourceTree = "<group>"; };
+		78F2D1CB147682E7004033ED /* KSGUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGUID.h; sourceTree = "<group>"; };
+		78F2D1CC147682E7004033ED /* KSGUID.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSGUID.mm; sourceTree = "<group>"; };
+		78F4BC4114B33AA40062D06A /* KSEEnvironments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSEEnvironments.h; sourceTree = "<group>"; };
+		78F4BC4214B33AA40062D06A /* KSEEnvironments.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSEEnvironments.mm; sourceTree = "<group>"; };
+		78F4BC4514B349270062D06A /* KSPFGSphericalGravitySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPFGSphericalGravitySource.h; sourceTree = "<group>"; };
+		78F4BC4814B35D0E0062D06A /* KSPFGSphericalGravitySource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSPFGSphericalGravitySource.mm; sourceTree = "<group>"; };
+		78F4BC4A14B44F2D0062D06A /* KSESolarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSESolarSystem.h; sourceTree = "<group>"; };
+		78F4BC4B14B44F2D0062D06A /* KSESolarSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSESolarSystem.mm; sourceTree = "<group>"; };
+		78F4BC4D14B44FEC0062D06A /* KSESolarSystemBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSESolarSystemBody.h; sourceTree = "<group>"; };
+		78F4BC4E14B44FEC0062D06A /* KSESolarSystemBody.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSESolarSystemBody.mm; sourceTree = "<group>"; };
+		78FFCB701413950200975E73 /* World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = World.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FFCB741413950200975E73 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		78FFCB771413950200975E73 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		78FFCB781413950200975E73 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		78FFCB791413950200975E73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78FFCB7C1413950200975E73 /* World-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "World-Info.plist"; sourceTree = "<group>"; };
+		78FFCB7E1413950200975E73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78FFCB801413950200975E73 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		78FFCB821413950200975E73 /* World-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "World-Prefix.pch"; sourceTree = "<group>"; };
+		78FFCB841413950200975E73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		78FFCB861413950200975E73 /* WorldAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldAppDelegate.h; sourceTree = "<group>"; };
+		78FFCB871413950200975E73 /* WorldAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = WorldAppDelegate.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78FFCB8A1413950200975E73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		78FFCB911413951000975E73 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		78FFCB941413975100975E73 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		78FFCB951413975100975E73 /* OpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = OpenGLView.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78FFCBC31413D82B00975E73 /* KSGVertexBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KSGVertexBatch.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78FFCBC41413D82B00975E73 /* KSGVertexBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = KSGVertexBatch.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		78FFCBCA1414B52000975E73 /* KSMMaths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = KSMMaths.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		78FFCBCC1414B6A500975E73 /* KSMMaths.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; lineEnding = 0; path = KSMMaths.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78FFCB6D1413950200975E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FFCB921413951000975E73 /* OpenGL.framework in Frameworks */,
+				78FFCB751413950200975E73 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78058B97146C1D7900A221F3 /* Coarse */ = {
+			isa = PBXGroup;
+			children = (
+				78058B90146A6A8900A221F3 /* KSCBVHNode.h */,
+				78058B91146A6A8900A221F3 /* KSCBVHNode.mm */,
+				78058B94146A95A900A221F3 /* KSCBoundingVolume.h */,
+				78058B95146A95A900A221F3 /* KSCBoundingVolume.mm */,
+				78058B99146C1E0100A221F3 /* KSCPotentialContact.h */,
+				78058B9A146C1E0100A221F3 /* KSCPotentialContact.mm */,
+				78F2D1C9147659E5004033ED /* KSCBody.h */,
+			);
+			name = Coarse;
+			sourceTree = "<group>";
+		};
+		78058B98146C1DC900A221F3 /* Fine */ = {
+			isa = PBXGroup;
+			children = (
+				7867DE04148A74EF0070E569 /* KSCContact.h */,
+				7867DE05148A74EF0070E569 /* KSCContact.mm */,
+				7867DE08148A7BD10070E569 /* KSCPrimitive.h */,
+				7867DE09148A7BD10070E569 /* KSCPrimitive.mm */,
+				7867DE0B148A7E310070E569 /* KSCPrimitiveSphere.h */,
+				7867DE11148A80310070E569 /* KSCPrimitiveSphere.mm */,
+				7867DE0E148A7EC20070E569 /* KSCPrimitivePlane.h */,
+				7867DE0F148A7EC20070E569 /* KSCPrimitivePlane.mm */,
+				7867DE13148A81210070E569 /* KSCPrimitiveBox.h */,
+				7867DE14148A81210070E569 /* KSCPrimitiveBox.mm */,
+				7867DE16148A81C20070E569 /* KSCCollisionDetector.h */,
+				7867DE17148A81C20070E569 /* KSCCollisionDetector.mm */,
+				78DDEA7014A09BFD00EB284C /* KSCOrientablePrimitive.h */,
+				78DDEA7114A09BFD00EB284C /* KSCOrientablePrimitive.mm */,
+			);
+			name = Fine;
+			sourceTree = "<group>";
+		};
+		7821081615A81F5C00B1A63E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7821081715A81F5C00B1A63E /* BagArmani.3DS */,
+				7821081815A81F5C00B1A63E /* Boots.3ds */,
+				7821081915A81F5C00B1A63E /* BridgeFancy.3ds */,
+				7821081A15A81F5C00B1A63E /* Cone.3ds */,
+				7821081B15A81F5C00B1A63E /* Cube.3ds */,
+				7821081C15A81F5C00B1A63E /* CubeMarble.3ds */,
+				7821081D15A81F5C00B1A63E /* CubeMarbleTexture.3ds */,
+				7821081E15A81F5C00B1A63E /* Cylinder.3ds */,
+				7821081F15A81F5C00B1A63E /* FigurineAphrodite.3DS */,
+				7821082015A81F5C00B1A63E /* FigurineAphroditeModern.3ds */,
+				7821082115A81F5C00B1A63E /* Globe.3DS */,
+				7821082215A81F5C00B1A63E /* HighlyDetailedIonicColumn.3ds */,
+				7821082315A81F5C00B1A63E /* HighyDetailedCorinthianColumn.3DS */,
+				7821082415A81F5C00B1A63E /* junglefootbridge.3DS */,
+				7821082515A81F5C00B1A63E /* Polyhedra.3ds */,
+				7821082615A81F5C00B1A63E /* SculptureBust.3DS */,
+				7821082715A81F5C00B1A63E /* SculptureShiva.3ds */,
+				7821082815A81F5C00B1A63E /* ShipAndHelicopter.3DS */,
+				7821082915A81F5C00B1A63E /* Skeleton.3DS */,
+				7821082A15A81F5C00B1A63E /* Skull.3DS */,
+				7821082B15A81F5C00B1A63E /* Solar System */,
+				7821084715A81F5C00B1A63E /* Sphere.3ds */,
+				7821084815A81F5C00B1A63E /* Stair.3ds */,
+				7821084915A81F5C00B1A63E /* TelescopeCelestronOmni.3DS */,
+				7821084A15A81F5C00B1A63E /* Terrain.3ds */,
+				7821084B15A81F5C00B1A63E /* Torus.3ds */,
+				7821084C15A81F5C00B1A63E /* Tube.3ds */,
+				7821084D15A81F5C00B1A63E /* TwoHerosSupportingBeam.3ds */,
+				7821084E15A81F5C00B1A63E /* Woman.3ds */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7821082B15A81F5C00B1A63E /* Solar System */ = {
+			isa = PBXGroup;
+			children = (
+				7821082C15A81F5C00B1A63E /* PlanetEarth */,
+				7821082F15A81F5C00B1A63E /* PlanetJupiter */,
+				7821083215A81F5C00B1A63E /* PlanetMars */,
+				7821083515A81F5C00B1A63E /* PlanetMercury */,
+				7821083815A81F5C00B1A63E /* PlanetNeptune */,
+				7821083B15A81F5C00B1A63E /* PlanetSaturn */,
+				7821083E15A81F5C00B1A63E /* PlanetUranus */,
+				7821084115A81F5C00B1A63E /* PlanetVenus */,
+				7821084415A81F5C00B1A63E /* Sun */,
+			);
+			path = "Solar System";
+			sourceTree = "<group>";
+		};
+		7821082C15A81F5C00B1A63E /* PlanetEarth */ = {
+			isa = PBXGroup;
+			children = (
+				7821082D15A81F5C00B1A63E /* Earth.bmp */,
+				7821082E15A81F5C00B1A63E /* PlanetEarth.3ds */,
+			);
+			path = PlanetEarth;
+			sourceTree = "<group>";
+		};
+		7821082F15A81F5C00B1A63E /* PlanetJupiter */ = {
+			isa = PBXGroup;
+			children = (
+				7821083015A81F5C00B1A63E /* Jupiter.bmp */,
+				7821083115A81F5C00B1A63E /* PlanetJupiter.3ds */,
+			);
+			path = PlanetJupiter;
+			sourceTree = "<group>";
+		};
+		7821083215A81F5C00B1A63E /* PlanetMars */ = {
+			isa = PBXGroup;
+			children = (
+				7821083315A81F5C00B1A63E /* Mars.bmp */,
+				7821083415A81F5C00B1A63E /* PlanetMars.3ds */,
+			);
+			path = PlanetMars;
+			sourceTree = "<group>";
+		};
+		7821083515A81F5C00B1A63E /* PlanetMercury */ = {
+			isa = PBXGroup;
+			children = (
+				7821083615A81F5C00B1A63E /* Mercury.bmp */,
+				7821083715A81F5C00B1A63E /* PlanetMercury.3ds */,
+			);
+			path = PlanetMercury;
+			sourceTree = "<group>";
+		};
+		7821083815A81F5C00B1A63E /* PlanetNeptune */ = {
+			isa = PBXGroup;
+			children = (
+				7821083915A81F5C00B1A63E /* Neptune.bmp */,
+				7821083A15A81F5C00B1A63E /* PlanetNeptune.3ds */,
+			);
+			path = PlanetNeptune;
+			sourceTree = "<group>";
+		};
+		7821083B15A81F5C00B1A63E /* PlanetSaturn */ = {
+			isa = PBXGroup;
+			children = (
+				7821083C15A81F5C00B1A63E /* PlanetSaturn.3ds */,
+				7821083D15A81F5C00B1A63E /* Saturn.bmp */,
+			);
+			path = PlanetSaturn;
+			sourceTree = "<group>";
+		};
+		7821083E15A81F5C00B1A63E /* PlanetUranus */ = {
+			isa = PBXGroup;
+			children = (
+				7821083F15A81F5C00B1A63E /* PlanetUranus.3ds */,
+				7821084015A81F5C00B1A63E /* Uranus.bmp */,
+			);
+			path = PlanetUranus;
+			sourceTree = "<group>";
+		};
+		7821084115A81F5C00B1A63E /* PlanetVenus */ = {
+			isa = PBXGroup;
+			children = (
+				7821084215A81F5C00B1A63E /* PlanetVenus.3ds */,
+				7821084315A81F5C00B1A63E /* Venus.bmp */,
+			);
+			path = PlanetVenus;
+			sourceTree = "<group>";
+		};
+		7821084415A81F5C00B1A63E /* Sun */ = {
+			isa = PBXGroup;
+			children = (
+				7821084515A81F5C00B1A63E /* PlanetSun.3ds */,
+				7821084615A81F5C00B1A63E /* Sun.bmp */,
+			);
+			path = Sun;
+			sourceTree = "<group>";
+		};
+		7821087D15A81F8000B1A63E /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				7821087E15A81F8000B1A63E /* Charon.bmp */,
+				7821087F15A81F8000B1A63E /* Cliff.psd */,
+				7821088015A81F8000B1A63E /* Concrete.psd */,
+				7821088115A81F8000B1A63E /* Globe.jpg */,
+				7821088215A81F8000B1A63E /* Granite.jpg */,
+				7821088315A81F8000B1A63E /* Grass.psd */,
+				7821088415A81F8000B1A63E /* GrassRock.psd */,
+				7821088515A81F8000B1A63E /* Green_Spottet.psd */,
+				7821088615A81F8000B1A63E /* IronRusty.jpg */,
+				7821088715A81F8000B1A63E /* Leather1.jpg */,
+				7821088815A81F8000B1A63E /* LeathTan.jpg */,
+				7821088915A81F8000B1A63E /* marbel4.JPG */,
+				7821088A15A81F8000B1A63E /* Marble.jpg */,
+				7821088B15A81F8000B1A63E /* Marble2.jpg */,
+				7821088C15A81F8000B1A63E /* Marble3.jpg */,
+				7821088D15A81F8000B1A63E /* PlanksNew.jpg */,
+				7821088E15A81F8000B1A63E /* Pluto.bmp */,
+				7821088F15A81F8000B1A63E /* SandRipp.psd */,
+				7821089015A81F8000B1A63E /* SandSmoo.psd */,
+				7821089115A81F8000B1A63E /* Shiva.jpg */,
+				7821089215A81F8000B1A63E /* StoneGreen.jpg */,
+				7821089315A81F8000B1A63E /* WoodRough.jpg */,
+				7821089415A81F8000B1A63E /* WoodShiny.jpg */,
+				7821089515A81F8000B1A63E /* WoodShiny2.jpg */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		7827D6DC149F315D004CB18A /* World */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = World;
+			sourceTree = "<group>";
+		};
+		785FA0591469177C0076AF37 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				78058B98146C1DC900A221F3 /* Fine */,
+				78058B97146C1D7900A221F3 /* Coarse */,
+			);
+			name = Collision;
+			sourceTree = "<group>";
+		};
+		787DD94D1497827C00020AB2 /* Vehicles */ = {
+			isa = PBXGroup;
+			children = (
+				787DD94F149782C300020AB2 /* KSVVehicle.h */,
+				787DD950149782C300020AB2 /* KSVVehicle.mm */,
+			);
+			name = Vehicles;
+			sourceTree = "<group>";
+		};
+		78BF11AF1476D862002FC456 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7821087D15A81F8000B1A63E /* Textures */,
+				7821081615A81F5C00B1A63E /* Models */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		78BF1DBD1417AB8700AD71B2 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				788243D0145D987500D1828A /* ShaderFlat.fp */,
+				788243D1145D987500D1828A /* ShaderFlat.vp */,
+				78BF1DBF1417ABB600AD71B2 /* ShaderXY.vp */,
+				78BF1DC11417ABD300AD71B2 /* ShaderXY.fp */,
+				788185D1145173330064736A /* ShaderGouraud.vp */,
+				788185D41451D10E0064736A /* ShaderGouraud.fp */,
+				78016EB1145D950F0053E21A /* ShaderPhong.vp */,
+				78016EB3145D95260053E21A /* ShaderPhong.fp */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		78F4BC4414B33AC00062D06A /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				78F4BC4114B33AA40062D06A /* KSEEnvironments.h */,
+				78F4BC4214B33AA40062D06A /* KSEEnvironments.mm */,
+				78F4BC4A14B44F2D0062D06A /* KSESolarSystem.h */,
+				78F4BC4B14B44F2D0062D06A /* KSESolarSystem.mm */,
+				78F4BC4D14B44FEC0062D06A /* KSESolarSystemBody.h */,
+				78F4BC4E14B44FEC0062D06A /* KSESolarSystemBody.mm */,
+			);
+			name = Environments;
+			sourceTree = "<group>";
+		};
+		78FFCB651413950200975E73 = {
+			isa = PBXGroup;
+			children = (
+				7819480015C28F960097A31B /* .gitignore */,
+				78FFCB7A1413950200975E73 /* World */,
+				78FFCB731413950200975E73 /* Frameworks */,
+				78FFCB711413950200975E73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78FFCB711413950200975E73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78FFCB701413950200975E73 /* World.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78FFCB731413950200975E73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78FFCB911413951000975E73 /* OpenGL.framework */,
+				78FFCB741413950200975E73 /* Cocoa.framework */,
+				78FFCB761413950200975E73 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78FFCB761413950200975E73 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78FFCB771413950200975E73 /* AppKit.framework */,
+				78FFCB781413950200975E73 /* CoreData.framework */,
+				78FFCB791413950200975E73 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		78FFCB7A1413950200975E73 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				78FFCB891413950200975E73 /* MainMenu.xib */,
+				78FFCB861413950200975E73 /* WorldAppDelegate.h */,
+				78FFCB871413950200975E73 /* WorldAppDelegate.mm */,
+				78FFCB931413968E00975E73 /* Classes */,
+				78FFCB7B1413950200975E73 /* Supporting Files */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		78FFCB7B1413950200975E73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78BF11AF1476D862002FC456 /* Assets */,
+				78BF11AC1476D7C2002FC456 /* README */,
+				78BF1DBD1417AB8700AD71B2 /* Shaders */,
+				78FFCB7C1413950200975E73 /* World-Info.plist */,
+				78FFCB7D1413950200975E73 /* InfoPlist.strings */,
+				78FFCB801413950200975E73 /* main.mm */,
+				78FFCB821413950200975E73 /* World-Prefix.pch */,
+				78FFCB831413950200975E73 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78FFCB931413968E00975E73 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				78F4BC4414B33AC00062D06A /* Environments */,
+				7827D6DC149F315D004CB18A /* World */,
+				787DD94D1497827C00020AB2 /* Vehicles */,
+				785FA0591469177C0076AF37 /* Collision */,
+				78FFCBA01413ACE600975E73 /* Graphics */,
+				78FFCB9F1413ACE200975E73 /* Physics */,
+				78FFCB9E1413ACDC00975E73 /* Maths */,
+				78FFCB941413975100975E73 /* OpenGLView.h */,
+				78FFCB951413975100975E73 /* OpenGLView.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		78FFCB9E1413ACDC00975E73 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				78193F2314B87BEA00921542 /* KSMRandomNumberGenerator.h */,
+				78193F2414B87BEA00921542 /* KSMRandomNumberGenerator.mm */,
+				78193F3314B8828D00921542 /* KSMEnhancedRandomNumberGenerator.h */,
+				78193F3414B8828D00921542 /* KSMEnhancedRandomNumberGenerator.mm */,
+				78193F2514B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.h */,
+				78193F2614B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.mm */,
+				78193F2714B87BEA00921542 /* KSMDistributionFunction.h */,
+				78193F2814B87BEA00921542 /* KSMDistributionFunction.mm */,
+				78193F2914B87BEA00921542 /* KSMNormalDistributionFunction.h */,
+				78193F3614B8830400921542 /* KSMNormalDistributionFunction.mm */,
+				78193F2B14B87BEA00921542 /* KSMDistributionFunctionAbstractBase.h */,
+				78193F2C14B87BEA00921542 /* KSMDistributionFunctionAbstractBase.mm */,
+				78FFCBCA1414B52000975E73 /* KSMMaths.cpp */,
+				78FFCBCC1414B6A500975E73 /* KSMMaths.h */,
+			);
+			name = Maths;
+			sourceTree = "<group>";
+		};
+		78FFCB9F1413ACE200975E73 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				787A1626149183D500857B38 /* KSPPhysics.h */,
+				784F751C14962A0F00E4B999 /* KSPConstants.h */,
+				7867DE19148CF3BD0070E569 /* KSPPhysicsBody.h */,
+				7867DE1A148CF3BD0070E569 /* KSPPhysicsBody.mm */,
+				787A160C148E552600857B38 /* KSPForceGeneratorRegistry.h */,
+				787A160D148E552600857B38 /* KSPForceGeneratorRegistry.mm */,
+				784F75161495FC1900E4B999 /* KSPForceGeneratorBase.h */,
+				784F75171495FC1900E4B999 /* KSPForceGeneratorBase.mm */,
+				784F75191496075E00E4B999 /* KSPFGUniversalBodyForce.h */,
+				784F751A1496075E00E4B999 /* KSPFGUniversalBodyForce.mm */,
+				787A1614148E621500857B38 /* KSPFGUniformGravity.h */,
+				787A1615148E621500857B38 /* KSPFGUniformGravity.mm */,
+				787A161D148FCA6600857B38 /* KSPFGSpring.h */,
+				787A161E148FCA6600857B38 /* KSPFGSpring.mm */,
+				787A1617148E65A000857B38 /* KSPFGAnchoredSpring.h */,
+				787A1618148E65A000857B38 /* KSPFGAnchoredSpring.mm */,
+				787A161A148F9D1A00857B38 /* KSPFGConnectingSpring.h */,
+				787A161B148F9D1A00857B38 /* KSPFGConnectingSpring.mm */,
+				787A1620148FE0E600857B38 /* KSPFGFloat.h */,
+				787A1621148FE0E600857B38 /* KSPFGFloat.mm */,
+				787A16231490B85E00857B38 /* KSPWater.h */,
+				787A16241490B85E00857B38 /* KSPWater.mm */,
+				787A1627149225A800857B38 /* KSPSolarSystemObject.h */,
+				787A1628149225A800857B38 /* KSPSolarSystemObject.mm */,
+				78CE2F0514AB46DB00409FED /* KSPMomentsOfInertia.h */,
+				78CE2F0614AB46DB00409FED /* KSPMomentsOfInertia.mm */,
+				78C31B1C14AD360400E017F7 /* KSPFGUniformDrag.h */,
+				78C31B1D14AD360400E017F7 /* KSPFGUniformDrag.mm */,
+				78F4BC4514B349270062D06A /* KSPFGSphericalGravitySource.h */,
+				78F4BC4814B35D0E0062D06A /* KSPFGSphericalGravitySource.mm */,
+			);
+			name = Physics;
+			sourceTree = "<group>";
+		};
+		78FFCBA01413ACE600975E73 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				784F751D1496307A00E4B999 /* KSGGraphics.h */,
+				78FFCBC31413D82B00975E73 /* KSGVertexBatch.h */,
+				78FFCBC41413D82B00975E73 /* KSGVertexBatch.mm */,
+				78BF1D991416429300AD71B2 /* KSGVertex.h */,
+				78BF1D9A1416429300AD71B2 /* KSGVertex.mm */,
+				78BF1DC31417B8E300AD71B2 /* KSGShaderManager.h */,
+				78BF1DC41417B8E300AD71B2 /* KSGShaderManager.mm */,
+				78BF1DCB1417D29400AD71B2 /* KSGIndexedAttributes.h */,
+				78BF1DCC1417D29400AD71B2 /* KSGIndexedAttributes.mm */,
+				78414FC6141CC6FF00B74348 /* KSGGameObject.h */,
+				78414FC7141CC6FF00B74348 /* KSGGameObject.mm */,
+				78414FCA1420C90100B74348 /* KSGWorld.h */,
+				78414FCB1420C90100B74348 /* KSGWorld.mm */,
+				783C0C64142726B60058F4E0 /* KSGCamera.h */,
+				783C0C65142726B60058F4E0 /* KSGCamera.mm */,
+				783C0C671428EA860058F4E0 /* KSGMesh.h */,
+				783C0C681428EA860058F4E0 /* KSGMesh.mm */,
+				78E221A1143F1BDF00AA0B14 /* KSGModelLoader.h */,
+				78E221A2143F1BDF00AA0B14 /* KSGModelLoader.mm */,
+				7894C6D4144471DE002DBDF0 /* KSGIndexedTriangleBatch.h */,
+				7894C6D2144471B8002DBDF0 /* KSGIndexedTriangleBatch.mm */,
+				78E221A71440BE1700AA0B14 /* KSGBatch.h */,
+				78E221A81440BE1700AA0B14 /* KSGBatch.mm */,
+				7894C6CB14430468002DBDF0 /* KSGTriangle.h */,
+				7894C6CC14430468002DBDF0 /* KSGTriangle.mm */,
+				782A43AF145028B700CFAE47 /* KSGLight.h */,
+				782A43B0145028B700CFAE47 /* KSGLight.mm */,
+				788185D61452AA570064736A /* KSGTransformPack.h */,
+				788185D71452AA580064736A /* KSGTransformPack.mm */,
+				782A43B2145029D000CFAE47 /* KSGMaterial.h */,
+				782A43B3145029D000CFAE47 /* KSGMaterial.mm */,
+				788243F71461924A00D1828A /* KSGMaterialManager.h */,
+				788243F81461924A00D1828A /* KSGMaterialManager.mm */,
+				7886A0E91462F85200AAD5C5 /* KSGTexture.h */,
+				7886A0EA1462F85200AAD5C5 /* KSGTexture.mm */,
+				7886A0ED1462F88000AAD5C5 /* KSGTextureManager.h */,
+				7886A0EE1462F88000AAD5C5 /* KSGTextureManager.mm */,
+				7886A0F01463E10900AAD5C5 /* KSGResourceManager.h */,
+				7886A0F31463EAF800AAD5C5 /* KSGResourceManager.mm */,
+				7886A0F614641FE100AAD5C5 /* KSGManagedResourceBase.h */,
+				7886A0F714641FE100AAD5C5 /* KSGManagedResourceBase.mm */,
+				78CB1339146523B100E30ACC /* KSGImage.h */,
+				78CB133A146523B100E30ACC /* KSGImage.mm */,
+				78CB133D1465259B00E30ACC /* KSGImageManager.h */,
+				78CB133E1465259C00E30ACC /* KSGImageManager.mm */,
+				78F2D1CB147682E7004033ED /* KSGUID.h */,
+				78F2D1CC147682E7004033ED /* KSGUID.mm */,
+				787A162A1492450E00857B38 /* KSGColor.h */,
+				787A162B1492450E00857B38 /* KSGColor.mm */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78FFCB6F1413950200975E73 /* World */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78FFCB8E1413950200975E73 /* Build configuration list for PBXNativeTarget "World" */;
+			buildPhases = (
+				78FFCB6C1413950200975E73 /* Sources */,
+				78FFCB6D1413950200975E73 /* Frameworks */,
+				78FFCB6E1413950200975E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = World;
+			productName = World;
+			productReference = 78FFCB701413950200975E73 /* World.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78FFCB671413950200975E73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Object Computing Solutions LTD";
+			};
+			buildConfigurationList = 78FFCB6A1413950200975E73 /* Build configuration list for PBXProject "World" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 78FFCB651413950200975E73;
+			productRefGroup = 78FFCB711413950200975E73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78FFCB6F1413950200975E73 /* World */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78FFCB6E1413950200975E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FFCB7F1413950200975E73 /* InfoPlist.strings in Resources */,
+				78FFCB851413950200975E73 /* Credits.rtf in Resources */,
+				78FFCB8B1413950200975E73 /* MainMenu.xib in Resources */,
+				78BF1DC01417ABB600AD71B2 /* ShaderXY.vp in Resources */,
+				78BF1DC21417ABD300AD71B2 /* ShaderXY.fp in Resources */,
+				788185D2145173330064736A /* ShaderGouraud.vp in Resources */,
+				788185D51451D10E0064736A /* ShaderGouraud.fp in Resources */,
+				78016EB2145D950F0053E21A /* ShaderPhong.vp in Resources */,
+				78016EB4145D95260053E21A /* ShaderPhong.fp in Resources */,
+				788243D2145D987500D1828A /* ShaderFlat.fp in Resources */,
+				788243D3145D987500D1828A /* ShaderFlat.vp in Resources */,
+				78BF11AD1476D7C2002FC456 /* README in Resources */,
+				7821084F15A81F5C00B1A63E /* BagArmani.3DS in Resources */,
+				7821085015A81F5C00B1A63E /* Boots.3ds in Resources */,
+				7821085115A81F5C00B1A63E /* BridgeFancy.3ds in Resources */,
+				7821085215A81F5C00B1A63E /* Cone.3ds in Resources */,
+				7821085315A81F5C00B1A63E /* Cube.3ds in Resources */,
+				7821085415A81F5C00B1A63E /* CubeMarble.3ds in Resources */,
+				7821085515A81F5C00B1A63E /* CubeMarbleTexture.3ds in Resources */,
+				7821085615A81F5C00B1A63E /* Cylinder.3ds in Resources */,
+				7821085715A81F5C00B1A63E /* FigurineAphrodite.3DS in Resources */,
+				7821085815A81F5C00B1A63E /* FigurineAphroditeModern.3ds in Resources */,
+				7821085915A81F5C00B1A63E /* Globe.3DS in Resources */,
+				7821085A15A81F5C00B1A63E /* HighlyDetailedIonicColumn.3ds in Resources */,
+				7821085B15A81F5C00B1A63E /* HighyDetailedCorinthianColumn.3DS in Resources */,
+				7821085C15A81F5C00B1A63E /* junglefootbridge.3DS in Resources */,
+				7821085D15A81F5C00B1A63E /* Polyhedra.3ds in Resources */,
+				7821085E15A81F5C00B1A63E /* SculptureBust.3DS in Resources */,
+				7821085F15A81F5C00B1A63E /* SculptureShiva.3ds in Resources */,
+				7821086015A81F5C00B1A63E /* ShipAndHelicopter.3DS in Resources */,
+				7821086115A81F5C00B1A63E /* Skeleton.3DS in Resources */,
+				7821086215A81F5C00B1A63E /* Skull.3DS in Resources */,
+				7821086315A81F5C00B1A63E /* Earth.bmp in Resources */,
+				7821086415A81F5C00B1A63E /* PlanetEarth.3ds in Resources */,
+				7821086515A81F5C00B1A63E /* Jupiter.bmp in Resources */,
+				7821086615A81F5C00B1A63E /* PlanetJupiter.3ds in Resources */,
+				7821086715A81F5C00B1A63E /* Mars.bmp in Resources */,
+				7821086815A81F5C00B1A63E /* PlanetMars.3ds in Resources */,
+				7821086915A81F5C00B1A63E /* Mercury.bmp in Resources */,
+				7821086A15A81F5C00B1A63E /* PlanetMercury.3ds in Resources */,
+				7821086B15A81F5C00B1A63E /* Neptune.bmp in Resources */,
+				7821086C15A81F5C00B1A63E /* PlanetNeptune.3ds in Resources */,
+				7821086D15A81F5C00B1A63E /* PlanetSaturn.3ds in Resources */,
+				7821086E15A81F5C00B1A63E /* Saturn.bmp in Resources */,
+				7821086F15A81F5C00B1A63E /* PlanetUranus.3ds in Resources */,
+				7821087015A81F5C00B1A63E /* Uranus.bmp in Resources */,
+				7821087115A81F5C00B1A63E /* PlanetVenus.3ds in Resources */,
+				7821087215A81F5C00B1A63E /* Venus.bmp in Resources */,
+				7821087315A81F5C00B1A63E /* PlanetSun.3ds in Resources */,
+				7821087415A81F5C00B1A63E /* Sun.bmp in Resources */,
+				7821087515A81F5C00B1A63E /* Sphere.3ds in Resources */,
+				7821087615A81F5C00B1A63E /* Stair.3ds in Resources */,
+				7821087715A81F5C00B1A63E /* TelescopeCelestronOmni.3DS in Resources */,
+				7821087815A81F5C00B1A63E /* Terrain.3ds in Resources */,
+				7821087915A81F5C00B1A63E /* Torus.3ds in Resources */,
+				7821087A15A81F5C00B1A63E /* Tube.3ds in Resources */,
+				7821087B15A81F5C00B1A63E /* TwoHerosSupportingBeam.3ds in Resources */,
+				7821087C15A81F5C00B1A63E /* Woman.3ds in Resources */,
+				7821089615A81F8000B1A63E /* Charon.bmp in Resources */,
+				7821089715A81F8000B1A63E /* Cliff.psd in Resources */,
+				7821089815A81F8000B1A63E /* Concrete.psd in Resources */,
+				7821089915A81F8000B1A63E /* Globe.jpg in Resources */,
+				7821089A15A81F8000B1A63E /* Granite.jpg in Resources */,
+				7821089B15A81F8000B1A63E /* Grass.psd in Resources */,
+				7821089C15A81F8000B1A63E /* GrassRock.psd in Resources */,
+				7821089D15A81F8000B1A63E /* Green_Spottet.psd in Resources */,
+				7821089E15A81F8000B1A63E /* IronRusty.jpg in Resources */,
+				7821089F15A81F8000B1A63E /* Leather1.jpg in Resources */,
+				782108A015A81F8000B1A63E /* LeathTan.jpg in Resources */,
+				782108A115A81F8000B1A63E /* marbel4.JPG in Resources */,
+				782108A215A81F8000B1A63E /* Marble.jpg in Resources */,
+				782108A315A81F8000B1A63E /* Marble2.jpg in Resources */,
+				782108A415A81F8000B1A63E /* Marble3.jpg in Resources */,
+				782108A515A81F8000B1A63E /* PlanksNew.jpg in Resources */,
+				782108A615A81F8000B1A63E /* Pluto.bmp in Resources */,
+				782108A715A81F8000B1A63E /* SandRipp.psd in Resources */,
+				782108A815A81F8000B1A63E /* SandSmoo.psd in Resources */,
+				782108A915A81F8000B1A63E /* Shiva.jpg in Resources */,
+				782108AA15A81F8000B1A63E /* StoneGreen.jpg in Resources */,
+				782108AB15A81F8000B1A63E /* WoodRough.jpg in Resources */,
+				782108AC15A81F8000B1A63E /* WoodShiny.jpg in Resources */,
+				782108AD15A81F8000B1A63E /* WoodShiny2.jpg in Resources */,
+				7819480115C28F960097A31B /* .gitignore in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78FFCB6C1413950200975E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FFCB811413950200975E73 /* main.mm in Sources */,
+				78FFCB881413950200975E73 /* WorldAppDelegate.mm in Sources */,
+				78FFCB961413975100975E73 /* OpenGLView.mm in Sources */,
+				78FFCBC51413D82B00975E73 /* KSGVertexBatch.mm in Sources */,
+				78FFCBCB1414B52000975E73 /* KSMMaths.cpp in Sources */,
+				78BF1D9B1416429300AD71B2 /* KSGVertex.mm in Sources */,
+				78BF1DC51417B8E300AD71B2 /* KSGShaderManager.mm in Sources */,
+				78BF1DCD1417D29400AD71B2 /* KSGIndexedAttributes.mm in Sources */,
+				78414FC8141CC6FF00B74348 /* KSGGameObject.mm in Sources */,
+				78414FCC1420C90200B74348 /* KSGWorld.mm in Sources */,
+				783C0C66142726B60058F4E0 /* KSGCamera.mm in Sources */,
+				783C0C691428EA870058F4E0 /* KSGMesh.mm in Sources */,
+				78E221A3143F1BDF00AA0B14 /* KSGModelLoader.mm in Sources */,
+				78E221A91440BE1700AA0B14 /* KSGBatch.mm in Sources */,
+				7894C6CD14430468002DBDF0 /* KSGTriangle.mm in Sources */,
+				7894C6D3144471B9002DBDF0 /* KSGIndexedTriangleBatch.mm in Sources */,
+				782A43B1145028B700CFAE47 /* KSGLight.mm in Sources */,
+				782A43B4145029D000CFAE47 /* KSGMaterial.mm in Sources */,
+				788185D81452AA580064736A /* KSGTransformPack.mm in Sources */,
+				788243F91461924A00D1828A /* KSGMaterialManager.mm in Sources */,
+				7886A0EB1462F85200AAD5C5 /* KSGTexture.mm in Sources */,
+				7886A0EF1462F88000AAD5C5 /* KSGTextureManager.mm in Sources */,
+				7886A0F41463EAF800AAD5C5 /* KSGResourceManager.mm in Sources */,
+				7886A0F814641FE200AAD5C5 /* KSGManagedResourceBase.mm in Sources */,
+				78CB133B146523B100E30ACC /* KSGImage.mm in Sources */,
+				78CB133F1465259C00E30ACC /* KSGImageManager.mm in Sources */,
+				78058B92146A6A8900A221F3 /* KSCBVHNode.mm in Sources */,
+				78058B96146A95A900A221F3 /* KSCBoundingVolume.mm in Sources */,
+				78058B9B146C1E0100A221F3 /* KSCPotentialContact.mm in Sources */,
+				78F2D1CD147682E7004033ED /* KSGUID.mm in Sources */,
+				7867DE06148A74EF0070E569 /* KSCContact.mm in Sources */,
+				7867DE0A148A7BD10070E569 /* KSCPrimitive.mm in Sources */,
+				7867DE10148A7EC20070E569 /* KSCPrimitivePlane.mm in Sources */,
+				7867DE12148A80310070E569 /* KSCPrimitiveSphere.mm in Sources */,
+				7867DE15148A81210070E569 /* KSCPrimitiveBox.mm in Sources */,
+				7867DE18148A81C20070E569 /* KSCCollisionDetector.mm in Sources */,
+				7867DE1B148CF3BD0070E569 /* KSPPhysicsBody.mm in Sources */,
+				787A160E148E552600857B38 /* KSPForceGeneratorRegistry.mm in Sources */,
+				787A1616148E621500857B38 /* KSPFGUniformGravity.mm in Sources */,
+				787A1619148E65A000857B38 /* KSPFGAnchoredSpring.mm in Sources */,
+				787A161C148F9D1A00857B38 /* KSPFGConnectingSpring.mm in Sources */,
+				787A161F148FCA6600857B38 /* KSPFGSpring.mm in Sources */,
+				787A1622148FE0E600857B38 /* KSPFGFloat.mm in Sources */,
+				787A16251490B85E00857B38 /* KSPWater.mm in Sources */,
+				787A1629149225A800857B38 /* KSPSolarSystemObject.mm in Sources */,
+				787A162C1492450E00857B38 /* KSGColor.mm in Sources */,
+				784F75181495FC1900E4B999 /* KSPForceGeneratorBase.mm in Sources */,
+				784F751B1496075E00E4B999 /* KSPFGUniversalBodyForce.mm in Sources */,
+				787DD951149782C300020AB2 /* KSVVehicle.mm in Sources */,
+				78DDEA7214A09BFD00EB284C /* KSCOrientablePrimitive.mm in Sources */,
+				78CE2F0714AB46DB00409FED /* KSPMomentsOfInertia.mm in Sources */,
+				78C31B1E14AD360400E017F7 /* KSPFGUniformDrag.mm in Sources */,
+				78F4BC4314B33AA40062D06A /* KSEEnvironments.mm in Sources */,
+				78F4BC4914B35D0E0062D06A /* KSPFGSphericalGravitySource.mm in Sources */,
+				78F4BC4C14B44F2D0062D06A /* KSESolarSystem.mm in Sources */,
+				78F4BC4F14B44FEC0062D06A /* KSESolarSystemBody.mm in Sources */,
+				78193F2D14B87BEA00921542 /* KSMRandomNumberGenerator.mm in Sources */,
+				78193F2E14B87BEA00921542 /* KSMRandomNumberGeneratorCMWC.mm in Sources */,
+				78193F2F14B87BEA00921542 /* KSMDistributionFunction.mm in Sources */,
+				78193F3114B87BEA00921542 /* KSMDistributionFunctionAbstractBase.mm in Sources */,
+				78193F3514B8828D00921542 /* KSMEnhancedRandomNumberGenerator.mm in Sources */,
+				78193F3714B8830400921542 /* KSMNormalDistributionFunction.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78FFCB7D1413950200975E73 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FFCB7E1413950200975E73 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78FFCB831413950200975E73 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FFCB841413950200975E73 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		78FFCB891413950200975E73 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FFCB8A1413950200975E73 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78FFCB8C1413950200975E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		78FFCB8D1413950200975E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		78FFCB8F1413950200975E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World/World-Prefix.pch";
+				INFOPLIST_FILE = "World/World-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		78FFCB901413950200975E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World/World-Prefix.pch";
+				INFOPLIST_FILE = "World/World-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78FFCB6A1413950200975E73 /* Build configuration list for PBXProject "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FFCB8C1413950200975E73 /* Debug */,
+				78FFCB8D1413950200975E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78FFCB8E1413950200975E73 /* Build configuration list for PBXNativeTarget "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FFCB8F1413950200975E73 /* Debug */,
+				78FFCB901413950200975E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78FFCB671413950200975E73 /* Project object */;
+}

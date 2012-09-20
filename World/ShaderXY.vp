@@ -1,0 +1,20 @@
+#version 150
+// 
+// vertex shader ShaderIdentity
+//
+
+// vertex attributes
+in vec4     v4VertexMC;           // the vertex position attribute
+in vec4     v4Color;              // vertex color attribute to pass on to shader
+in vec2     v2Texture0;           // vertex texture 0
+in vec2     v2Texture1;           // vertex texture 0
+in vec2     v2Texture2;           // vertex texture 0
+in vec2     v2Texture3;           // vertex texture 0
+
+out vec4    v4VaryingColor;         // the color attribute again
+
+void main(void)
+{
+    gl_Position   = v4VertexMC;     // pass the vertex on
+    v4VaryingColor = v4Color;       // pass the color on
+}

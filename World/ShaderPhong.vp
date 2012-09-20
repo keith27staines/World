@@ -1,0 +1,152 @@
+#version 150
+// 
+// vertex shader: ADS Phong shader
+//
+
+////////////////////////////////////////////////////////////////////////////////
+// Vector postfix defs
+// VC  = view coordinate (aka eye coordinate)
+// WC  = world coordinate
+// MC  = model coordinate
+// PC  = projection coordinates 
+////////////////////////////////////////////////////////////////////////////////
+
+const int MAX_LIGHTS          =  1;
+
+const int FOG_MODE_NONE  	  =  0;
+const int FOG_MODE_LINEAR  	  =  1;
+const int FOG_MODE_EXP        =  2;
+const int FOG_MODE_EXP2       =  3;
+
+// memory-saving constants
+const float F_ZERO = 0.0;
+const float F_ONE  = 1.0;
+const float F_TWO  = 2.0;
+const int   I_ZERO = 0;
+const int   I_ONE  = 1;
+const float PI     = 3.141592654;
+
+struct light
+{
+    vec4 v4positionVC;              // position of light (in eye coordinates)
+    vec4 v4ambientColor;            // ambient color emitted by light
+    vec4 v4diffuseColor;            // diffuse color emitted by light
+    vec4 v4specularColor;           // specular color emitted by light
+    vec3 v3attenuations;            // holds constant, linear and quadratic factors
+    float exponent;                 // intensity falls off with angle
+    float coneAngle;                // limiting angle
+};
+
+struct material
+{
+    vec4    v4ambientColor;
+    vec4    v4diffuseColor;
+    vec4    v4specularColor;
+    vec4    v4emissiveColor;
+    float   exponent;
+};
+
+
+// lighting and material
+uniform vec4    v4lPositionVC;
+uniform vec4    v4lAmbientColor;
+uniform vec4    v4lDiffuseColor;
+uniform vec4    v4lSpecularColor;
+uniform vec3    v3lAttenuations;
+uniform float   lExponent;
+uniform float   lConeAngle;
+
+uniform vec4    v4mAmbientColor;
+uniform vec4    v4mDiffuseColor;
+uniform vec4    v4mSpecularColor;
+uniform vec4    v4mEmissiveColor;
+uniform float   mExponent;
+
+
+uniform int     numLights;
+material        aMaterial;
+light           lights[MAX_LIGHTS];
+
+// Per batch transformation matrices
+uniform mat4 mp4Matrix;    // model - view - projection matrix (includes rot and trans) 
+uniform mat4 mv4Matrix;    // model - view matrix (includes rotation and translation)
+uniform mat3 mv3Matrix;    // model - view (rotates from model to view, no translation)
+
+// Incoming vertex attributes
+in vec4     v4VertexMC;             // the vertex position 
+in vec3     v3NormalMC;             // vertex normal direction
+in vec4     v4Color;                // vertex color
+in vec2     v2Texture0;             // vertex texture 0
+in vec2     v2Texture1;             // vertex texture 1
+in vec2     v2Texture2;             // vertex texture 2
+in vec2     v2Texture3;             // vertex texture 3
+
+// outputs  
+smooth out vec3     v3NormalVC;    // normal direction in eye coords
+smooth out vec3     v3vertexToLightVC[MAX_LIGHTS];
+smooth out vec3     v3VertexToEyeVC;
+smooth out vec2     v2varyingTex0;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// setupLights
+void setupLightDirs(void)
+{
+
+    // Get the vertex position in eye coordinates
+    vec4 v4VertexVC = mv4Matrix * v4VertexMC;
+
+    for( int i = I_ZERO; i < MAX_LIGHTS; i++ )
+    {
+        if (i >= numLights) break;
+        light aLight = lights[i];
+        
+        // In preparation for future extension, we convert the light data 
+        // currently held in uniform datat types into a structure (one day the
+        // structure will be passed in directly) 
+        
+        if ( 0 == aLight.v4positionVC.w )
+        {
+            // directional lights (effectively at infinity) suffer no attenuation
+            // by distance so we only care about the direction of the light
+            v3vertexToLightVC[i] = aLight.v4positionVC.xyz;
+            v3vertexToLightVC[i] = normalize(v3vertexToLightVC[i]);
+        }
+        else
+        {
+            // don't normalise - the length means something here
+            v3vertexToLightVC[i] = aLight.v4positionVC.xyz - v4VertexVC.xyz;
+        }
+    }
+
+    return;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// main
+void main(void)
+{
+    // first duty as always is to transform the vertex position into clip space
+    gl_Position = mp4Matrix * v4VertexMC;
+
+    // spot light or point light
+    v3NormalVC = mv3Matrix * v3NormalMC;
+    
+    // direction from vertex to eye
+    v3VertexToEyeVC = mv3Matrix * v4VertexMC.xyz;
+    
+    // texture
+    v2varyingTex0 = v2Texture0;
+
+    // Prepare for the lighting calculation. 
+    lights[0].v4positionVC          = v4lPositionVC;               
+    lights[0].v4ambientColor        = v4lAmbientColor;            
+    lights[0].v4diffuseColor        = v4lDiffuseColor;           
+    lights[0].v4specularColor       = v4lSpecularColor;           
+    lights[0].v3attenuations        = v3lAttenuations;      
+    lights[0].exponent              = lExponent;         
+    lights[0].coneAngle             = lConeAngle;                
+        
+    setupLightDirs();
+    
+}

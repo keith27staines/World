@@ -1,0 +1,28 @@
+// 
+// vertex shader ShaderFlat
+//
+#version 150
+
+//in vec4     v3NormalMC;           // vertex normal in model coordinates
+//in vec2     v2Texture0;           // vertex texture 0
+//in vec2     v2Texture1;           // vertex texture 0
+//in vec2     v2Texture2;           // vertex texture 0
+//in vec2     v2Texture3;           // vertex texture 0
+
+// model - projection matrix (includes rot and trans)
+uniform mat4 mp4Matrix;    
+
+// vertex attributes
+in vec4     v4VertexMC;           // vertex position in model coordinates 
+in vec4     v4Color;              // vertex color attribute to pass on to shader
+
+// output to fragment shader
+smooth out vec4    v4VaryingColor;       // pass color to frag shader
+
+
+void main(void)
+{
+    // first duty as always is to transform the vertex position
+    gl_Position = mp4Matrix * v4VertexMC;
+    v4VaryingColor = v4Color;  // pass the color on
+}

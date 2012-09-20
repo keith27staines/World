@@ -1,0 +1,256 @@
+#version 150
+// 
+// vertex shader: ADS Gouraud shader
+//
+
+////////////////////////////////////////////////////////////////////////////////
+// Vector postfix defs
+// VC  = view coordinate (aka eye coordinate)
+// WC  = world coordinate
+// MC  = model coordinate
+// PC  = projection coordinates 
+////////////////////////////////////////////////////////////////////////////////
+
+const int MAX_LIGHTS          =  1;
+
+const int FOG_MODE_NONE  	  =  0;
+const int FOG_MODE_LINEAR  	  =  1;
+const int FOG_MODE_EXP        =  2;
+const int FOG_MODE_EXP2       =  3;
+
+// memory-saving constants
+const float F_ZERO = 0.0;
+const float F_ONE  = 1.0;
+const float F_TWO  = 2.0;
+const int   I_ZERO = 0;
+const int   I_ONE  = 1;
+const float PI     = 3.141592654;
+
+struct light
+{
+    vec4 v4positionVC;              // position of light (in eye coordinates)
+    vec4 v4ambientColor;            // ambient color emitted by light
+    vec4 v4diffuseColor;            // diffuse color emitted by light
+    vec4 v4specularColor;           // specular color emitted by light
+    vec3 v3attenuations;            // holds constant, linear and quadratic factors
+    float exponent;                 // intensity falls off with angle
+    float coneAngle;                // limiting angle
+};
+
+struct material
+{
+    vec4    v4ambientColor;
+    vec4    v4diffuseColor;
+    vec4    v4specularColor;
+    vec4    v4emissiveColor;
+    float   exponent;
+};
+
+
+// lighting and material
+uniform vec4    v4lPositionVC;
+uniform vec4    v4lAmbientColor;
+uniform vec4    v4lDiffuseColor;
+uniform vec4    v4lSpecularColor;
+uniform vec3    v3lAttenuations;
+uniform float   lExponent;
+uniform float   lConeAngle;
+
+uniform vec4    v4mAmbientColor;
+uniform vec4    v4mDiffuseColor;
+uniform vec4    v4mSpecularColor;
+uniform vec4    v4mEmissiveColor;
+uniform float   mExponent;
+
+
+uniform int     numLights;
+material        aMaterial;
+light           lights[MAX_LIGHTS];
+
+// Per batch transformation matrices
+uniform mat4 mp4Matrix;    // model - view - projection matrix (includes rot and trans) 
+uniform mat4 mv4Matrix;    // model - view matrix (includes rotation and translation)
+uniform mat3 mv3Matrix;    // model - view (rotates from model to view, no translation)
+
+// Incoming vertex attributes
+in vec4     v4VertexMC;             // the vertex position 
+in vec3     v3NormalMC;             // vertex normal direction
+in vec4     v4Color;                // vertex color
+in vec2     v2Texture0;             // vertex texture 0
+in vec2     v2Texture1;             // vertex texture 1
+in vec2     v2Texture2;             // vertex texture 2
+in vec2     v2Texture3;             // vertex texture 3
+
+// vectors transformed to eye coordinates
+vec4        v4VertexVC;              // the vertex position in eye coords
+vec3        v3NormalVC;              // normal direction in eye coords
+
+// color accumulator - eventually output to fragment shader
+smooth out vec4    v4VaryingColor;      
+
+////////////////////////////////////////////////////////////////////////////////
+// uses the ADS lighting model to calculate the contribution of this light, and
+// adds the contribution color accumulator
+vec4 lightingEquation(int lightIndex)
+{
+    // define the color vector this light contributes, and initially assume that 
+    // this light provides no illumination
+    vec4     retColor = vec4(F_ZERO, F_ZERO, F_ZERO, F_ZERO);
+
+    // get the light that we are going to analyse
+    light    aLight = lights[lightIndex];
+    
+    // define the intensity of the light to be maximum brightness initially
+    // (this will probably get downgraded before we are through)
+    float    intensity = F_ONE;
+
+
+    // define the position vector from the vertex to the light (later, we will
+    // turn this into a pure direction, but initially we also need the vertex
+    // to light distance
+    vec3     v3vertexToLightVC;
+    
+    // are we dealing with a directional light or a spot/point light?
+    if ( 0 == aLight.v4positionVC.w )
+    {
+        // directional lights (effectively at infinity) suffer no attenuation
+        // by distance so we only care about the direction of the light
+        v3vertexToLightVC = aLight.v4positionVC.xyz;
+        v3vertexToLightVC = normalize(v3vertexToLightVC);
+    }
+    else
+    {
+        // spot light or point light
+        vec4 v4VertexVC = mv4Matrix * v4VertexMC;
+        v3vertexToLightVC = aLight.v4positionVC.xyz - v4VertexVC.xyz;
+        
+        // compute intensity factors
+        vec3    v3intensityFactors;
+
+        // constant intensity term
+        v3intensityFactors.x = intensity;
+
+        // intensity of light arriving at vertex depends on distance squared
+        v3intensityFactors.z = dot(v3vertexToLightVC, v3vertexToLightVC);
+
+        // there is also a linear term in distance
+        v3intensityFactors.y = sqrt(v3intensityFactors.z);
+
+        // put everything together
+        intensity = F_ONE / dot(v3intensityFactors, aLight.v3attenuations);
+
+        // from now on we want the vertex to light vector to be normalised
+        v3vertexToLightVC = normalize(v3vertexToLightVC);
+
+        // are we dealing with a spot 
+        float   cosineOfAngle;
+        if (aLight.coneAngle < PI)
+        {
+            // we are dealing with a spot light, so introduce an extra
+            // factor to reduce intensity depending on how far from
+            // the light's pointing direction we are.
+
+            // Begin by calculating the cosine of the angle between the 
+            // spot look direction and the vector from the light to the vertex
+            cosineOfAngle = dot(-v3vertexToLightVC, aLight.v4positionVC.xyz);
+
+            // are we inside the cone of the spot light?
+            if ( cosineOfAngle < cos(aLight.coneAngle) )
+            {
+                // No, we are outside the cone, so this light contributes zero
+                intensity = F_ZERO;
+            }
+            else
+            {
+                // we are inside the cone of light coming from the spot
+                intensity *= pow(cosineOfAngle, aLight.exponent);
+            }
+
+        }
+    }
+        
+    // if the intensity is greater than zero, we need to calculate the
+    // additional color this light contributes
+    if (intensity > 0)
+    {
+        // this light provides at least some illumination so
+        // calculate the color. First comes the ambient bit
+        retColor += aLight.v4ambientColor * aMaterial.v4ambientColor;
+
+        // now the diffuse term
+        float cosAngleBetweenNormalAndLight;
+        cosAngleBetweenNormalAndLight = max(F_ZERO, 
+                                          dot(v3NormalVC,v3vertexToLightVC));
+        retColor += cosAngleBetweenNormalAndLight * 
+                       (aLight.v4diffuseColor * aMaterial.v4diffuseColor);
+
+        // finally the specular term
+        vec3 v3reflectionVC = reflect(-v3vertexToLightVC, v3NormalVC);
+        v3reflectionVC = normalize(v3reflectionVC);
+        float cosReflectionAngle = max( F_ZERO, dot(v3NormalVC,v3reflectionVC) );
+        retColor += pow( cosReflectionAngle, aMaterial.exponent) *
+                    (aLight.v4specularColor * aMaterial.v4specularColor);
+                    
+    }
+
+    // and return the color contribution from this light
+    return retColor * intensity;
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// doLighting - applies the lighting equation to each light in turn and sums
+// the results. The alpha channel is overwritten by taking the alpha value
+// from the material diffuse color
+vec4 doLighting(void)
+{
+    vec4 v4vertexColor = aMaterial.v4emissiveColor;
+
+    for( int i = I_ZERO; i < MAX_LIGHTS; i++ )
+    {
+        if (i >= numLights) break;
+        
+        v4vertexColor += lightingEquation(i);
+    }
+
+    v4vertexColor.a = aMaterial.v4diffuseColor.a;
+    
+    return v4vertexColor;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// main
+void main(void)
+{
+    // first duty as always is to transform the vertex position into clip space
+    gl_Position = mp4Matrix * v4VertexMC;
+
+    // and get the normal direction in eye coordinates
+    v3NormalVC = mv3Matrix * v3NormalMC;
+    
+    // In preparation for future extension, we convert the light data 
+    // currently held in uniform datat types into a structure (one day the
+    // structure will be passed in directly) 
+    
+    // Prepare for the lighting calculation. 
+    lights[0].v4positionVC          = v4lPositionVC;               
+    lights[0].v4ambientColor        = v4lAmbientColor;            
+    lights[0].v4diffuseColor        = v4lDiffuseColor;           
+    lights[0].v4specularColor       = v4lSpecularColor;           
+    lights[0].v3attenuations        = v3lAttenuations;      
+    lights[0].exponent              = lExponent;         
+    lights[0].coneAngle             = lConeAngle;                
+       
+    // do the same with the material data
+    aMaterial.v4ambientColor        = v4mAmbientColor;
+    aMaterial.v4diffuseColor        = v4mDiffuseColor;
+    aMaterial.v4specularColor       = v4mSpecularColor;
+    aMaterial.v4emissiveColor       = v4mEmissiveColor;
+    aMaterial.exponent              = mExponent;   
+    
+     // now we can continue as we would if we had all the light and material
+     // data passed in as uniform arrays of structs 
+
+    // do the lighting and pass on vertex color to fragment shader
+    v4VaryingColor = doLighting();
+}
